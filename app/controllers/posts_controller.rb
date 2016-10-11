@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     if params[:user_id]
       @resources = User.find(params[:user_id]).posts
     else
-      @resources = Post.all
+      @resources = Post.page(params[:page]).per(5)
     end
   end
 

@@ -17,3 +17,7 @@ Doorkeeper.configure do
     User.find_by(email: params[:username])
   end
 end
+
+# "error":"unsupported_grant_type" への対応
+# cf. http://www.amelt.net/imc/programming/rails/4937/#8221unsupported_grant_type8221
+Doorkeeper.configuration.token_grant_types << 'password'

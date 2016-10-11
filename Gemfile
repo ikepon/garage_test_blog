@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'the_garage', github: 'cookpad/garage'
+gem 'garage-doorkeeper'
 
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.5.0'

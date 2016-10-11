@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
   scope :v1 do
     resources :users, only: %i(index show update)
+    resources :posts
   end
 end

@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  validates :update do
+    string :name, required: true
+  end
+
   # Resource を提供する controller で include する必要がある
   include Garage::RestfulActions
 

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :posts
+
   include Garage::Representer # リソースのエンコーディング・シリアライゼーションを提供するモジュール
   include Garage::Authorizable # アクセスコントロール機能を提供するモジュール
 
@@ -6,6 +8,7 @@ class User < ApplicationRecord
   property :id
   property :name
   property :email
+  link(:posts) { user_posts_path(self) }
 
   # その他、link を用いて他のリソースへのリンクを宣言することも可
 

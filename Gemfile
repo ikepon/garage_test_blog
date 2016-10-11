@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'the_garage', github: 'cookpad/garage'
 gem 'garage-doorkeeper'
+gem 'kaminari'
 gem 'weak_parameters', '~> 0.1.5'
 
 group :development, :test do
